@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DesarrolloWindows", "DesarrolloWindows\DesarrolloWindows.vbproj", "{EB591893-5CFD-4D8D-B5BF-01208766C90B}"
 EndProject
@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{8BE7
 	ProjectSection(SolutionItems) = preProject
 		BaseDeDatos.sql = BaseDeDatos.sql
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VisualBasic", "VisualBasic", "{D7C2D71F-C2B2-4829-B6C3-4B879BDA6737}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +25,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB591893-5CFD-4D8D-B5BF-01208766C90B} = {D7C2D71F-C2B2-4829-B6C3-4B879BDA6737}
 	EndGlobalSection
 EndGlobal

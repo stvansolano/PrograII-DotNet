@@ -23,6 +23,7 @@ Partial Class FormularioPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.botonConectar = New System.Windows.Forms.Button()
+        Me.ListBoxDatos = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'botonConectar
@@ -34,11 +35,20 @@ Partial Class FormularioPrincipal
         Me.botonConectar.Text = "Conectar"
         Me.botonConectar.UseVisualStyleBackColor = True
         '
+        'ListBoxDatos
+        '
+        Me.ListBoxDatos.FormattingEnabled = True
+        Me.ListBoxDatos.Location = New System.Drawing.Point(13, 13)
+        Me.ListBoxDatos.Name = "ListBoxDatos"
+        Me.ListBoxDatos.Size = New System.Drawing.Size(256, 173)
+        Me.ListBoxDatos.TabIndex = 1
+        '
         'FormularioPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.ListBoxDatos)
         Me.Controls.Add(Me.botonConectar)
         Me.Name = "FormularioPrincipal"
         Me.Text = "Cafeteria"
@@ -47,4 +57,5 @@ Partial Class FormularioPrincipal
     End Sub
 
     Friend WithEvents botonConectar As Button
+    Friend WithEvents ListBoxDatos As ListBox
 End Class

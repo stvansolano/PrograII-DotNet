@@ -1,4 +1,4 @@
-﻿/*** USE [SQLprogra2Azure] **/*
+﻿/*** USE [SQLprogra2Azure] ***/
 GO
 
 SET ANSI_NULLS ON
