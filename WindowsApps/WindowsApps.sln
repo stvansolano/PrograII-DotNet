@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{8BE7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VisualBasic", "VisualBasic", "{D7C2D71F-C2B2-4829-B6C3-4B879BDA6737}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{8B140C8C-9F22-4C6E-8E1B-06D9770B1A56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{EB591893-5CFD-4D8D-B5BF-01208766C90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB591893-5CFD-4D8D-B5BF-01208766C90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB591893-5CFD-4D8D-B5BF-01208766C90B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B140C8C-9F22-4C6E-8E1B-06D9770B1A56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B140C8C-9F22-4C6E-8E1B-06D9770B1A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B140C8C-9F22-4C6E-8E1B-06D9770B1A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B140C8C-9F22-4C6E-8E1B-06D9770B1A56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

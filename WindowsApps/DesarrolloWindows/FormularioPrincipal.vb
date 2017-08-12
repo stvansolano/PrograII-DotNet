@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports CapaNegocio
 
 Public Class FormularioPrincipal
 
@@ -41,7 +42,18 @@ Public Class FormularioPrincipal
     End Sub
 
     Private Sub CargarInterfazGrafica()
-        ListBoxDatos.DisplayMember = "PrimerApellido"
-        ListBoxDatos.DataSource = _dataTable
+        ListBoxDatos.DisplayMember = "NombreCompleto"
+        ListBoxDatos.DataSource = Cliente.ObtenerClientes(_dataTable)
+    End Sub
+
+    Private Sub OrdenesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenesToolStripMenuItem.Click
+        Dim ventana As New FormularioPrincipal
+
+        IsMdiContainer = True
+        ventana.MdiParent = Me
+
+        ventana.StartPosition = FormStartPosition.Manual
+        ventana.Location = New Point(300, 0)
+        ventana.Show()
     End Sub
 End Class
