@@ -1,12 +1,6 @@
 ﻿/*** USE [SQLprogra2Azure] ***/
+USE [Cafeteria]
 GO
-
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
 CREATE TABLE [dbo].[Clientes] (
     [Id]              INT            IDENTITY (1, 1) NOT NULL,
     [Nombre]          NVARCHAR (MAX) NOT NULL,
@@ -14,3 +8,5 @@ CREATE TABLE [dbo].[Clientes] (
     [SegundoApellido] NVARCHAR (MAX) NOT NULL,
     [Telefono]        NVARCHAR (MAX) NULL
 );
+GO
+INSERT INTO Clientes (Nombre, PrimerApellido, SegundoApellido, Telefono) VALUES ('Esteban', 'Solano', 'Granados', '555-5555')
