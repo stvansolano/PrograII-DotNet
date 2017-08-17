@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
 
 namespace DesarrolloWindows.CSharp
 {
@@ -55,7 +56,8 @@ namespace DesarrolloWindows.CSharp
         private void CargarInterfazGrafica()
         {
             ListBoxDatos.DisplayMember = "Telefono";
-            ListBoxDatos.DataSource = _dataTable;
+            // ListBoxDatos.DataSource = _dataTable;
+            ListBoxDatos.DataSource = CapaNegocio.Cliente.ObtenerClientes(_dataTable);
         }
 
         private void FormularioPrincipal_Load(object sender, EventArgs e)
