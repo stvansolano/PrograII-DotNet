@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaNegocio;
 
 namespace DesarrolloWindows.CSharp
 {
-    public partial class FormularioProductos : Form
+    public partial class FormularioEmpleados : Form
     {
-        public FormularioProductos()
+        public FormularioEmpleados()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var empleados = NominaWeb.ObtenerEmpleados();
+
+            MessageBox.Show($"Se encontraron: {empleados.Length} empleados");
         }
     }
 }
