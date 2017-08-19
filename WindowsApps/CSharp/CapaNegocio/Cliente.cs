@@ -14,13 +14,23 @@ namespace CapaNegocio
         public string PrimerApellido { get; set; }
         public string SegundoApellido { get; set; }
         public string Telefono { get; set; }
+
+        public string NombreCompleto {
+            get {
+                return Nombre + " " + PrimerApellido + " " + SegundoApellido;
+            }
+        }
         
         public static Cliente[] ObtenerClientes(DataTable tabla) 
         {
             var consulta = from cliente in tabla.AsEnumerable()
+
                            select new Cliente {
                                Nombre = cliente.Field<string>("Nombre"),
-                               Telefono = cliente.Field<string>("Telefono")
+                               Telefono = cliente.Field<string>("Telefono"),
+                               PrimerApellido = cliente.Field<string>("PrimerApellido"),
+                               SegundoApellido = cliente.Field<string>("SegundoApellido")
+                               
                            };
 
             return consulta.ToArray();
