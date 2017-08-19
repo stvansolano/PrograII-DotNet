@@ -10,6 +10,10 @@ CREATE TABLE [dbo].[Clientes] (
 );
 GO
 INSERT INTO Clientes (Nombre, PrimerApellido, SegundoApellido, Telefono) VALUES ('Esteban', 'Solano', 'Granados', '555-5555')
+/*
+	DELETE FROM Clientes WHERE Id = 1
+*/
+
 GO
 CREATE TABLE [dbo].[Productos](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
