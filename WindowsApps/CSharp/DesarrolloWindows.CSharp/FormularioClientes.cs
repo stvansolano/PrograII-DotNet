@@ -1,4 +1,5 @@
 ﻿using CapaDatos;
+using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,12 +24,11 @@ namespace DesarrolloWindows.CSharp
 
         public void ConectarBaseDeDatos()
         {
-            var cadena = "Server=tcp:sqlprogra2azure.database.windows.net,1433;Initial Catalog=SQLprogra2Azure;Persist Security Info=False;User ID=sqladmin;Password=12345abC;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-            //var cadena = "Data Source=PANTALLA;Database=CafeteriaProgra2;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
-
+            var cadena = ContextoDatos.CADENA_CONEXION;
+            
             var conexion = new SqlConnection(cadena);
             var comando = conexion.CreateCommand();
-            comando.CommandText = "SELECT Nombre, PrimerApellido, Telefono FROM Clientes";
+            comando.CommandText = "SELECT Nombre, PrimerApellido, SegundoApellido, Telefono FROM Clientes";
 
             //Abrir la conexion
             conexion.Open();
@@ -46,7 +46,7 @@ namespace DesarrolloWindows.CSharp
         {
             // ListBoxDatos.DataSource = _dataTable;
 
-            dataGridView1.DataSource = _dataTable;
+            dataGridView1.DataSource = Cliente.ObtenerClientes(_dataTable);
         }
         
         private void FormularioClientes_Load(object sender, EventArgs e)

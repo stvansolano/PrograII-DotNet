@@ -16,5 +16,10 @@ namespace DesarrolloWindows.CSharp
         {
             InitializeComponent();
         }
+
+        private void FormularioProductos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

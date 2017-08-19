@@ -20,10 +20,7 @@ namespace DesarrolloWindows.CSharp
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var ventana = new FormularioProductos();
-
             ventana.MdiParent = this;
-            ventana.StartPosition = FormStartPosition.Manual;
-            ventana.Location = new Point(300, 0);
 
             ventana.Show();
         }
@@ -31,12 +28,24 @@ namespace DesarrolloWindows.CSharp
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var ventana = new FormularioClientes();
-
-            ventana.Location = new Point(0, 300);
             ventana.MdiParent = this;
-            ventana.StartPosition = FormStartPosition.Manual;
 
             ventana.Show();
+        }
+
+        private void cascadaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void verticalmenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void horizontalmenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileHorizontal);
         }
     }
 }
