@@ -46,29 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormularioClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioClientes.Designer.cs">
-      <DependentUpon>FormularioClientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormularioPrincipal.Designer.cs">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormularioProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioProductos.Designer.cs">
-      <DependentUpon>FormularioProductos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormularioClientes.resx">
-      <DependentUpon>FormularioClientes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,10 +81,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
-      <Project>{98fdad07-a0bc-4677-a0cf-44233d1d6138}</Project>
-      <Name>CapaDatos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
       <Project>{2a98fc22-3a01-446c-91e6-86ee539ed6aa}</Project>
       <Name>CapaNegocio</Name>

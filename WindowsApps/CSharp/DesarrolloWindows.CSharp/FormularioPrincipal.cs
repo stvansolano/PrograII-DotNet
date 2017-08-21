@@ -19,18 +19,10 @@ namespace DesarrolloWindows.CSharp
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var ventana = new FormularioProductos();
-            ventana.MdiParent = this;
-
-            ventana.Show();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var ventana = new FormularioClientes();
-            ventana.MdiParent = this;
-
-            ventana.Show();
         }
 
         private void cascadaToolStripMenuItem_Click(object sender, EventArgs e)
