@@ -16,10 +16,20 @@ namespace DesarrolloWindows.CSharp
     public partial class FormularioClientes : Form
     {
         private DataTable _dataTable;
-        
+
+        public const double BONO = 10000;
+        public static double CalcularSalario(double salarioBruto) 
+        {
+            double deducciones = (double) 9 / 100;
+
+            return salarioBruto - (salarioBruto * deducciones) + BONO;
+        }
+
         public FormularioClientes()
         {
             InitializeComponent();
+
+            var salarioNeto = CalcularSalario(15000);
         }
 
         public void ConectarBaseDeDatos()
@@ -28,7 +38,7 @@ namespace DesarrolloWindows.CSharp
             
             var conexion = new SqlConnection(cadena);
             var comando = conexion.CreateCommand();
-            comando.CommandText = "SELECT Nombre, PrimerApellido, SegundoApellido, Telefono FROM Clientes";
+            comando.CommandText = "SELECT * FROM Clientes";
 
             //Abrir la conexion
             conexion.Open();
